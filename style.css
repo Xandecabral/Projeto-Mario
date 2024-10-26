@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+
+.logo-mario{
+    height: 200px; /* Altura da imagem */
+}
+
+.img-mario-luigi {
+    height: 500px;
+}
+
+.caixa-video {
+    position: fixed; /*posição do video */
+    top: 0;
+    z-index: -1; /* video na frente */
+}
+
+video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+} 
+
+.mascara {
+    height: 100%; /* Altura vw*/
+    width: 100%; /* Largura vh*/
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: fixed;
+    top: 0;
+}
+
+button {
+    color: white; /* Cor do texto do botão */
+    background-color: #C51111; /* Cor do fundao botão */
+    border-radius: 3px; /* redondamento da borda */
+    border: none; /* sem borda */
+    width: 200px; /* largura */
+    height: 50px; /* altura */
+    cursor: pointer; /* maozinha do botão */
+    text-transform: uppercase; /* letra maiscula */
+    font-weight: bold; /* Fonte negrito */
+    margin-top: 30px;
+}
+
+
+body {
+    height: 100vh; /* tela inteira */
+}
+
+.caixa-principal {
+    display: flex; /* divisor de caixa */
+    align-items: center; /* alimentanto dos itens altura */
+    justify-content: space-around; /* ajudeste de espaço das caixas */
+    padding: 100px; /* espaçamento interno */
+    height: 100vh; /* tela inteira */   
+}
+
+.texto1 {
+    width: 40%;
+}
+   
+p {
+    color: white;
+    font-size: 18px;
+}
+
+.link-whatsapp img {
+    width: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* espaçamento do menu */
+    margin: 30px;
+}
+
+.header img {
+    height: 60px;
+}
+
+.header a {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: #C51111;
+    font-size: 26px;
+    transition: 0.5s ease-in-out;
+}
+
+.formulario-fale-conosco {
+    background-color: white;
+    display: flex;
+    gap: 20px; /* separar caixas */
+    flex-direction: column;
+    position: fixed;
+    left: -300px;
+    top: 30%;
+    padding: 20px;
+    border-radius: 5px;
+    transition: left 1s ease-in-out;
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding-left: 5px;
+    outline-color: #18D80F;
+}
+
+textarea {
+    width: 270px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding-left: 5px;
+    outline-color: #18D80F;
+}
+
+.mascara-formulario {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    transition: visibility 1s ease-in-out;
+}
+
+/* Midia query */
+
+@media(max-width: 1100px){
+    
+    p {
+        display: none;
+    }
+
+    .caixa-principal {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+    
+    .texto1 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .img-mario-luigi {
+        width: 80vw;
+        height: auto;
+    }
+
+    .header {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header img {
+        display: none;
+    }
+
+    .header  a {
+        font-size: 20px;
+    }
+}
