@@ -1,4 +1,4 @@
-<h1>Mario Bros</h1>
+<h1 align="center">Mario Bros</h1>
 <br>
 <br>
 
